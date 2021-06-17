@@ -30,7 +30,7 @@ class Api::V1::UsersController < ApplicationController
       # your code godes here
       set_user
       if @user.update(user_params)
-        render json: @user, status: 201
+        render json: @user, status: 200
       else
         render json: { error:
           "Unable to create user: #{@user.errors.full_messages.to_sentence}"},
